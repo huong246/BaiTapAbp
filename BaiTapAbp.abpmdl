@@ -1,0 +1,108 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LeptonXLiteTheme": {
+      "version": "4.3.5",
+      "isInstalled": true
+    },
+    "Volo.Abp.Account": {
+      "version": "9.3.5",
+      "isInstalled": true,
+      "creationTime": "10/30/2025 07:20:08 +00:00"
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "9.3.5",
+      "isInstalled": true,
+      "creationTime": "10/30/2025 07:20:08 +00:00"
+    },
+    "Volo.Abp.Identity": {
+      "version": "9.3.5",
+      "isInstalled": true,
+      "creationTime": "10/30/2025 07:20:08 +00:00"
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "9.3.5",
+      "isInstalled": true,
+      "creationTime": "10/30/2025 07:20:08 +00:00"
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "9.3.5",
+      "isInstalled": true,
+      "creationTime": "10/30/2025 07:20:08 +00:00"
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "9.3.5",
+      "isInstalled": true,
+      "creationTime": "10/30/2025 07:20:08 +00:00"
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "9.3.5",
+      "isInstalled": true,
+      "creationTime": "10/30/2025 07:20:08 +00:00"
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "BaiTapAbp.Application": {
+      "path": "src/BaiTapAbp.Application/BaiTapAbp.Application.abppkg",
+      "folder": "src"
+    },
+    "BaiTapAbp.Application.Tests": {
+      "path": "test/BaiTapAbp.Application.Tests/BaiTapAbp.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "BaiTapAbp.Domain.Shared": {
+      "path": "src/BaiTapAbp.Domain.Shared/BaiTapAbp.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "BaiTapAbp.Application.Contracts": {
+      "path": "src/BaiTapAbp.Application.Contracts/BaiTapAbp.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "BaiTapAbp.HttpApi": {
+      "path": "src/BaiTapAbp.HttpApi/BaiTapAbp.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "BaiTapAbp.HttpApi.Client": {
+      "path": "src/BaiTapAbp.HttpApi.Client/BaiTapAbp.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "BaiTapAbp.EntityFrameworkCore.Tests": {
+      "path": "test/BaiTapAbp.EntityFrameworkCore.Tests/BaiTapAbp.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "BaiTapAbp.EntityFrameworkCore": {
+      "path": "src/BaiTapAbp.EntityFrameworkCore/BaiTapAbp.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "BaiTapAbp.TestBase": {
+      "path": "test/BaiTapAbp.TestBase/BaiTapAbp.TestBase.abppkg",
+      "folder": "test"
+    },
+    "BaiTapAbp.Domain.Tests": {
+      "path": "test/BaiTapAbp.Domain.Tests/BaiTapAbp.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "BaiTapAbp.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/BaiTapAbp.HttpApi.Client.ConsoleTestApp/BaiTapAbp.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "BaiTapAbp.DbMigrator": {
+      "path": "src/BaiTapAbp.DbMigrator/BaiTapAbp.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "BaiTapAbp.HttpApi.Host": {
+      "path": "src/BaiTapAbp.HttpApi.Host/BaiTapAbp.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "BaiTapAbp.Domain": {
+      "path": "src/BaiTapAbp.Domain/BaiTapAbp.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}

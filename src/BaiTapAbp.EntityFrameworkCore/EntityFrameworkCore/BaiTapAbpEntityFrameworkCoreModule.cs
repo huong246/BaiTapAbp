@@ -1,4 +1,5 @@
 using System;
+using BaiTapAbp.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Uow;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
@@ -12,6 +13,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.BlobStoring.Database.EntityFrameworkCore;
+using Volo.Abp.Identity;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using Volo.Abp.Studio;
 
@@ -44,8 +46,14 @@ public class BaiTapAbpEntityFrameworkCoreModule : AbpModule
         {
                 /* Remove "includeAllEntities: true" to create
                  * default repositories only for aggregate roots */
+            
+                options.AddDefaultRepositories(includeAllEntities: true);
+        });
+        context.Services.AddAbpDbContext<BaiTapAbpBusinessDbContext>(options =>
+        {
             options.AddDefaultRepositories(includeAllEntities: true);
         });
+       
 
         if (AbpStudioAnalyzeHelper.IsInAnalyzeMode)
         {

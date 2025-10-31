@@ -12,5 +12,5 @@ public class ShopEntity : FullAuditedEntity<int>
     public string Name { get; set; } = string.Empty;
     [MaxLength(100)]
     public string Address { get; set; } = string.Empty;
-    public DateTime CreateTime { get; set; }
+  
 }

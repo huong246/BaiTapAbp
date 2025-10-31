@@ -34,7 +34,8 @@ namespace BaiTapAbp;
     typeof(AbpIdentityDomainModule),
     typeof(AbpOpenIddictDomainModule),
     typeof(AbpTenantManagementDomainModule),
-    typeof(BlobStoringDatabaseDomainModule)
+    typeof(BlobStoringDatabaseDomainModule),
+    typeof(AbpIdentityDomainModule)
     )]
 public class BaiTapAbpDomainModule : AbpModule
 {
@@ -44,6 +45,7 @@ public class BaiTapAbpDomainModule : AbpModule
         {
             options.IsEnabled = MultiTenancyConsts.IsEnabled;
         });
+     
          
 
 

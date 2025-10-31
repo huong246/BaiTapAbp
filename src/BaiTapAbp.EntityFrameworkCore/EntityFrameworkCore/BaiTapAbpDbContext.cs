@@ -1,3 +1,4 @@
+using BaiTapAbp.Entities;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -20,11 +21,9 @@ namespace BaiTapAbp.EntityFrameworkCore;
 [ReplaceDbContext(typeof(IIdentityDbContext))]
 [ReplaceDbContext(typeof(ITenantManagementDbContext))]
 [ConnectionStringName("Default")]
-public class BaiTapAbpDbContext :
-    AbpDbContext<BaiTapAbpDbContext>,
-    ITenantManagementDbContext,
-    IIdentityDbContext
+public class BaiTapAbpDbContext(DbContextOptions<BaiTapAbpDbContext> options) : AbpDbContext<BaiTapAbpDbContext>(options), ITenantManagementDbContext, IIdentityDbContext
 {
+    
     /* Add DbSet properties for your Aggregate Roots / Entities here. */
 
 
@@ -57,12 +56,6 @@ public class BaiTapAbpDbContext :
 
     #endregion
 
-    public BaiTapAbpDbContext(DbContextOptions<BaiTapAbpDbContext> options)
-        : base(options)
-    {
-
-    }
-
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -87,5 +80,12 @@ public class BaiTapAbpDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
+        builder.Entity<UserEntity>(b =>
+        {
+            b.ToTable("AbpUsers"); 
+            b.Property(x => x.FullName).IsRequired().HasMaxLength(100);
+            b.Property(x => x.Address).HasMaxLength(100);
+            b.Property(x => x.Gender);
+        });
     }
 }

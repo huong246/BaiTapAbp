@@ -108,6 +108,7 @@ public class BaiTapAbpHttpApiHostModule : AbpModule
             {
                 options.ForwardedHeaders = ForwardedHeaders.XForwardedProto;
             });
+            
         }
 
         ConfigureAuthentication(context);
@@ -263,6 +264,8 @@ public class BaiTapAbpHttpApiHostModule : AbpModule
 
         app.UseUnitOfWork();
         app.UseDynamicClaims();
+        app.UseAuthentication();
+        app.UseAbpOpenIddictValidation();
         app.UseAuthorization();
 
         app.UseSwagger();
